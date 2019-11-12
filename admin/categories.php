@@ -12,10 +12,10 @@
           <h1 class="page-header">Welcome To Admin <small>Author</small></h1>
 
           <div class="col-xs-6">
-            
+
 
             <?php 
-              if(isset($_POST['submit'])){
+            if(isset($_POST['submit'])){
               $cat_title = $_POST['cat_title'];
 
               if ($cat_title == "" || empty($cat_title)) {
@@ -30,7 +30,7 @@
                   die('QUERY FAILED' .mysqli_error($connection));
                 }
               }
-              }
+            }
             ?>
 
 
@@ -46,6 +46,19 @@
                 <input class="btn btn-primary" type="submit" name="submit" value="Add Category">
               </div>
             </form>
+
+          <?php
+          if(isset($_GET['edit'])) {
+
+            $cat_id = $_GET['edit'];
+            
+            include "includes/update_categories.php";
+          }
+
+          ?>
+
+
+
           </div>
 
           <div class="col-xs-6">
@@ -75,12 +88,13 @@
                   echo "<td>{$cat_id}</td>";
                   echo "<td>{$cat_title}</td>";
                   echo "<td><a href='categories.php?delete={$cat_id}'>Delete</a></td>";
+                  echo "<td><a href='categories.php?edit={$cat_id}'>Edit</a></td>";
                   echo "</tr>";
                 }
                 ?> 
 
 
-                <?php 
+                <?php //DELETE QUERY
 
                 if (isset($_GET['delete'])) {
                   $the_cat_id = $_GET['delete'];
@@ -88,7 +102,6 @@
                   $delete_query = mysqli_query($connection,$query);
                   header ("Location: categories.php");
                 }
-
 
                 ?>
 
