@@ -19,11 +19,11 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Posts <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#">View All Posts</a></li>
-          <li><a href="#">Add Posts</a></li>
+          <li><a href="./posts.php">View All Posts</a></li>
+          <li><a href="posts.php?source=add_post">Add Posts</a></li>
         </ul>
       </li>
-      <li><a href="bootstrap-grid.html"><i class="fa fa-wrench"></i> Categories</a></li>
+      <li><a href="./categories.php"><i class="fa fa-wrench"></i> Categories</a></li>
       <li><a href="blank-page.html"><i class="fa fa-file"></i> Comments</a></li>
       
       <li class="dropdown">

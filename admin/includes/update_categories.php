@@ -30,7 +30,7 @@
                   $update_query = mysqli_query($connection,$query);
                   
                   if (!$update_query ) {
-                    die("QUERY FAILED" . mysqli_error($connection));
+                  die("QUERY FAILED" . mysqli_error($connection));
                   }
                 }
 
