@@ -15,21 +15,23 @@
             <div class="col-md-8">
 
               <?php
-              if (isset($_GET['p_id'])) {
-                  
-              $the_post_id = $_GET['p_id'];
 
+
+              if(isset($_GET['category'])) {    
+                // echo $_GET['category']; die();
+                $post_category_id = $_GET['category'];
               }
 
-                $query = "SELECT * FROM posts WHERE post_id = $the_post_id ";
+                $query = "SELECT * FROM posts WHERE post_category_id = $post_category_id ";
                 $select_all_posts_query = mysqli_query($connection,$query);
 
                 while($row = mysqli_fetch_assoc($select_all_posts_query)) {
+                        $post_id = $row['post_id'];
                         $post_title = $row['post_title'];
                         $post_author = $row['post_author'];
                         $post_date = $row['post_date'];
                         $post_image = $row['post_image'];
-                        $post_content = $row['post_content'];
+                        $post_content = substr($row['post_content'],0,100);
 
                         ?>
 
@@ -42,7 +44,7 @@
 
                 <!-- First Blog Post -->
                 <h2>
-                    <a href="#"><?php echo $post_title ?></a>
+                    <a href="post.php?p_id=<?php echo $post_id ?> "><?php echo $post_title ?></a>
                 </h2>
                 <p class="lead">
                     by <a href="author_posts.php"><?php echo $post_author ?></a>
@@ -57,35 +59,7 @@
                 <a class="btn btn-primary" href="post.php?p_id=">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr>
-            <?php } ?>
-
-
-
-
-                <!-- Comments Form -->
-                <div class="well">
-                    <h4>Leave a Comment:</h4>
-                    <form action="" method="post" role="form">
-                        <div class="form-group">
-                            <label for="comment_author">Author</label>
-                            <input type="text" name="comment_author" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="comment_email">Email</label>
-                            <input type="email" name="comment_email" class="form-control">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="comment_content">Content</label>
-                            <textarea name="comment_content" class="form-control" rows="3"></textarea>
-                        </div>
-
-                        <button name="create_comment" type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-
-                <hr>
+                <?php } ?>
 
 
 
