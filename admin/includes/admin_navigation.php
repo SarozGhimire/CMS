@@ -24,7 +24,7 @@
         </ul>
       </li>
       <li><a href="./categories.php"><i class="fa fa-wrench"></i> Categories</a></li>
-      <li><a href="blank-page.html"><i class="fa fa-file"></i> Comments</a></li>
+      <li><a href="comments.php"><i class="fa fa-file"></i> Comments</a></li>
       
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i>  Users <b class="caret"></b></a>
