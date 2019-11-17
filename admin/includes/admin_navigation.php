@@ -29,8 +29,8 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i>  Users <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Dropdown Item</a></li>
-          <li><a href="#">Another Item</a></li>
+          <li><a href="users.php">View All Users</a></li>
+          <li><a href="users.php?source=add_user">Add User</a></li>
         </ul>
       </li>
       <li><a href="typography.html"><i class="fa fa-font"></i> Profile</a></li>

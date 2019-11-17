@@ -40,14 +40,14 @@
               $select_categories_id = mysqli_query($connection,$query);
 
                 // print_r($select_categories_id); die();
-                while($row = mysqli_fetch_assoc($select_categories_id)) {
+              while($row = mysqli_fetch_assoc($select_categories_id)) {
                 $cat_id = $row['cat_id'];
                 $cat_title = $row['cat_title'];
 
 
                 echo "<td>{$cat_title}</td>";
 
-                }
+              }
               echo "<td>{$post_title}</td>";
               echo "<td>{$post_author}</td>";
               echo "<td>{$post_date}</td>";
@@ -59,21 +59,21 @@
               echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
               echo "</tr>";
             }
-          
-          ?>
+            
+            ?>
             
           </tr>
         </tbody>
       </table>
 
-<?php 
-   
-  if (isset($_GET['delete'])) {
-    $the_post_id = $_GET['delete'];
+      <?php 
+      
+      if (isset($_GET['delete'])) {
+        $the_post_id = $_GET['delete'];
 
-    $query = "DELETE FROM posts WHERE post_id = {$the_post_id} ";
-    $delete_query = mysqli_query($connection, $query);
-    header("Location: posts.php");
-  }
+        $query = "DELETE FROM posts WHERE post_id = {$the_post_id} ";
+        $delete_query = mysqli_query($connection, $query);
+        header("Location: posts.php");
+      }
 
-?>
+      ?>
