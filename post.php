@@ -95,7 +95,7 @@
 
         ?>
 
-        <!-- Comments Form -->
+`        <!-- Comments Form -->
         <div class="well">
             <h4>Leave a Comment:</h4>
             <form action="" method="post" role="form">

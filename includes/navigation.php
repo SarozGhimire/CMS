@@ -35,7 +35,7 @@
 
                
                     <li class=''>
-                        <a href="admin">Admin</a>
+                        <a href="./index.php">Admin</a>
                     </li>
                     
                     

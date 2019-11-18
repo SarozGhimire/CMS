@@ -9,7 +9,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.html">CMS Admin</a>
+    <a class="navbar-brand" href="">CMS Admin</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -33,7 +33,7 @@
           <li><a href="users.php?source=add_user">Add User</a></li>
         </ul>
       </li>
-      <li><a href="typography.html"><i class="fa fa-font"></i> Profile</a></li>
+      <li><a href="profile.php"><i class="fa fa-font"></i> Profile</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right navbar-user">

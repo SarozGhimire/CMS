@@ -4,7 +4,7 @@ if (isset($_POST['create_post'])) {
 // echo $_POST['post_category']; die();
 	$post_title = $_POST['post_title']; 
 	$post_author = $_POST['post_author']; 
-	$post_category_id = $_POST['post_category']; 
+	$post_category_id = $_POST['post_category_id']; 
 	$post_status = $_POST['post_status']; 
 
 	$post_image = $_FILES['image']['name']; 
@@ -45,7 +45,7 @@ if (isset($_POST['create_post'])) {
 	</div>
 
 	<div class="form-group">
-		<select name="post_category" id="">
+		<select name="post_category_id" id="">
 			<?php
 			$query = "SELECT * FROM categories";
 			$select_categories = mysqli_query($connection,$query);
