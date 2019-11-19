@@ -1,36 +1,24 @@
-tinymce.init({ selector:'textarea' });
+tinymce.init({selector:'textarea'});
 
-$(document).ready(function(){
-    $('#selectAllBoxes').click(function(event){
-        if(this.checked) {
-                $('.checkBoxes').each(function(){
-                    this.checked = true;
-                });
-        }
-        else{
-            $('.checkBoxes').each(function(){
-                this.checked = false;
-            });
-        }
-    });
+$(document) .ready(function(){
+	$('#selectAllBoxes').click(function(event){
+		if (this.checked) {
 
-var divBox = "<div id='load-screen'><div id='loading'></div></div>";
-$("body").prepend(divBox);
-$('#load-screen').delay(700).fadeOut(600, function(){
-    $(this).remove();
+			$('.checkBoxes').each(function(){
+				this.checked = true;
+			});
+
+		} else {
+			$('.checkBoxes').each(function(){
+				this.checked = false;
+			});
+
+		}
+
+	});
+
+
+
+
+
 });
-
-});
-
-
-function loadUsersOnline()
-{
-    $.get("functions.php?onlineusers=result", function(data){
-        $(".usersonline").text(data);
-    });
-}
-
-setInterval(function(){
-    loadUsersOnline();
-}, 500);
-
