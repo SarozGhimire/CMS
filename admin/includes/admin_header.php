@@ -50,13 +50,16 @@ header("Location: ../index.php");
     <title>Dashboard - SB Admin</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    
 
     <!-- Add custom CSS here -->
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/sb-admin.css" rel="stylesheet">
+
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <!-- Page Specific CSS -->
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+    <link href="css/styles.css" rel="stylesheet">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
