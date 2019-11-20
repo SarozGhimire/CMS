@@ -38,6 +38,10 @@
                     <a href="admin">Admin</a>
                 </li>
 
+                <li class=''>
+                    <a href="registration.php">Registration</a>
+                </li>
+
                
 
                 <?php 

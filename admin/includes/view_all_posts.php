@@ -11,33 +11,33 @@ if (isset($_POST['checkBoxArray'])) {
     switch ($bulk_options) {
       case 'published':
       // echo "string"; die();
-        $query = "UPDATE posts SET post_status = '{$bulk_options}' WHERE post_id = {$postValueId} ";
+      $query = "UPDATE posts SET post_status = '{$bulk_options}' WHERE post_id = {$postValueId} ";
 
-        $update_to_published_status = mysqli_query($connection,$query);
+      $update_to_published_status = mysqli_query($connection,$query);
 
-        confirmQuery($update_to_published_status);  
+      confirmQuery($update_to_published_status);  
 
-        break;
+      break;
 
-        case 'draft':
+      case 'draft':
       // echo "string"; die();
-        $query = "UPDATE posts SET post_status = '{$bulk_options}' WHERE post_id = {$postValueId} ";
+      $query = "UPDATE posts SET post_status = '{$bulk_options}' WHERE post_id = {$postValueId} ";
 
-        $update_to_draft_status = mysqli_query($connection,$query);
+      $update_to_draft_status = mysqli_query($connection,$query);
 
-        confirmQuery($update_to_draft_status);  
+      confirmQuery($update_to_draft_status);  
 
-        break;
+      break;
 
-        case 'delete':
+      case 'delete':
       // echo "string"; die();
-        $query = "DELETE FROM posts WHERE post_id = {$postValueId} ";
+      $query = "DELETE FROM posts WHERE post_id = {$postValueId} ";
 
-        $update_to_delete_status = mysqli_query($connection,$query);
+      $update_to_delete_status = mysqli_query($connection,$query);
 
-        confirmQuery($update_to_delete_status);  
+      confirmQuery($update_to_delete_status);  
 
-        break;
+      break;
     }
   }
 }
@@ -74,7 +74,7 @@ if (isset($_POST['checkBoxArray'])) {
 
     <thead>
       <tr>
-<th><input id="selectAllBoxes" type="checkbox"></th>
+        <th><input id="selectAllBoxes" type="checkbox"></th>
         <th>Id</th>
         <th>Category</th>
         <th>Title</th>
@@ -138,7 +138,7 @@ if (isset($_POST['checkBoxArray'])) {
         echo "<td>{$post_status}</td>";
         echo "<td><a href='../post.php?p_id={$post_id}'>View Post</a></td>";
         echo "<td><a href='posts.php?source=edit_post&p_id={$post_id}'>Edit</a></td>";
-        echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
+        echo "<td><a onClick=\"javascript: return confirm('Are you sure you want to delete'); \" href='posts.php?delete={$post_id}'>Delete</a></td>";
         echo "</tr>";
       }
 
