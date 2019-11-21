@@ -37,6 +37,7 @@
     </ul>
 
     <ul class="nav navbar-nav navbar-right navbar-user">
+      <li><a href="">Users Online: <?php echo users_online(); ?></a></li>
       <li><a href="../index.php">HOME SITE</a></li>
       
 
